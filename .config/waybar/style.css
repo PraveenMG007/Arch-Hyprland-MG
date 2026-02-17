@@ -1,0 +1,191 @@
+/***
+ * ┓ ┏┏┓┓┏┳┓┏┓┳┓  ┏┓┏┓┏┓
+ * ┃┃┃┣┫┗┫┣┫┣┫┣┫━━┃ ┗┓┗┓
+ * ┗┻┛┛┗┗┛┻┛┛┗┛┗  ┗┛┗┛┗┛
+ */
+
+/*----------Imports----------------------*/
+@import "colors.css";
+
+/*----------Global Reset-----------------*/
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-weight: bold;
+    min-height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*----------Waybar Container-------------*/
+#waybar {
+    background-color: transparent;
+    padding: 2px;
+    border-radius: 14px;
+}
+
+/*----------Tooltip----------------------*/
+tooltip {
+    background: @surface;
+    border: 1px solid @surface_variant;
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: @on_surface;
+    padding: 6px;
+}
+
+/*----------Workspaces Container---------*/
+#workspaces {
+    background-color: @surface;
+    padding: 5px 3px;
+    margin: 0 0 0 12px;
+    border-radius: 18px;
+    border: 1px solid @surface_variant;
+    color: @on_surface;
+}
+
+/*----------Workspace Buttons------------*/
+#workspaces button {
+    padding: 0px 6px;
+    margin: 0px 3px;
+    border-radius: 30px;
+    color: transparent;
+    background-color: @surface_variant;
+    transition: all 0.3s ease-in-out;
+}
+
+/*----------Workspace Active-------------*/
+#workspaces button.active {
+    background-color: @primary;
+    color: @on_primary;
+    min-width: 30px;
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+}
+
+/*----------Workspace Hover--------------*/
+#workspaces button:hover {
+    background-color: @secondary;
+    color: @on_secondary;
+    border-radius: 16px;
+    min-width: 30px;
+    background-size: 400% 400%;
+}
+
+/*----------Workspace Urgent-------------*/
+#workspaces button.urgent {
+    background-color: @error;
+    color: @on_error;
+    border-radius: 16px;
+    min-width: 30px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+/*----------Module Containers------------*/
+#battery,
+#pulseaudio,
+#network,
+#clock,
+#backlight,
+#custom-updates {
+    background-color: @surface;
+    padding: 0 15px;
+    margin: 0 0 0 12px;
+    border: 1px solid @surface_variant;
+    border-radius: 12px;
+    color: @on_surface;
+}
+
+/*----------Arch Logo--------------------*/
+#custom-arch {
+    color: @primary;
+    background-color: @surface;
+    font-size: 20px;
+    margin-left: 12px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1px solid @surface_variant;
+}
+
+/*----------Clock------------------------*/
+#clock {
+    color: @primary;
+}
+
+/*----------Pulseaudio-------------------*/
+#pulseaudio {
+    color: @primary;
+    transition: color 0.3s ease;
+}
+
+#pulseaudio.muted {
+    color: @primary; 
+}
+
+/*----------Network----------------------*/
+#network {
+    color: @primary;
+}
+
+/*----------Battery----------------------*/
+#battery {
+    color: @on-surface; 
+    transition: color 0.3s ease;
+}
+
+/* Charging color */
+#battery.charging,
+#battery.plugged {
+    color: @tertiary; 
+}
+
+/* Pure red for 30% and under */
+#battery.warning:not(.charging) {
+    color: #FF0000;
+}
+
+/* Blinking pure red for 15% and under */
+#battery.critical:not(.charging) {
+    color: #FF0000;
+    animation: blink 1.5s linear infinite; 
+}
+
+/*----------Backlight--------------------*/
+#backlight {
+    color: @primary; 
+}
+
+/*----------Updates----------------------*/
+#custom-updates {
+    color: #FF0000;
+}
+
+/*----------MPRIS (Center)---------------*/
+#mpris {
+    color: @primary;           
+    background-color: @surface;   
+    padding: 0 15px;
+    margin: 0 12px;
+    border-radius: 12px;
+    border: 1px solid @primary;
+    transition: all 0.3s ease;
+}
+
+/* Made distinctly different: transparent background, dashed border, secondary text */
+#mpris.paused {
+    color: @secondary;  
+    background-color: transparent; 
+    border: 1px dashed @secondary;
+    opacity: 0.9;
+}
+
+/*----------Keyframes--------------------*/
+@keyframes blink {
+    0% { color: #FF0000; }
+    50% { color: @on_surface; }
+    100% { color: #FF0000; }
+}

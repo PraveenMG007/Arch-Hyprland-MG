@@ -1,0 +1,39 @@
+# ==========================================
+# ~/.config/mako/config (Colorless Glass)
+# ==========================================
+
+font=sans-serif 10
+width=260
+height=85
+margin=15
+padding=12
+border-size=1
+border-radius=12
+default-timeout=4000
+sort=-time
+layer=overlay
+anchor=top-right
+icon-location=left
+max-icon-size=48
+
+# --- Pure Monochrome / No Colors ---
+# Uses only black and white with transparency
+
+# Dark transparent background
+background-color=#000000aa
+# Pure white text
+text-color=#ffffff
+# Faint white border
+border-color=#ffffff55
+progress-color=source #ffffff88
+
+# --- Urgency Levels ---
+[urgency=low]
+border-color=#ffffff33
+text-color=#dddddd
+
+[urgency=high]
+# Solid white border for high urgency, zero color
+border-color=#ffffff
+text-color=#ffffff
+default-timeout=0

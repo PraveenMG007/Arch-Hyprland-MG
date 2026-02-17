@@ -1,0 +1,141 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "margin-top": 4,
+    "margin-right": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "modules-left": [
+        "custom/arch",
+        "custom/updates",
+        "clock",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "mpris"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "network",
+        "battery"
+    ],
+    "custom/arch": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "~/.config/hypr/scripts/powermenu.sh"
+    },
+    "custom/updates": {
+        "format": "{}",
+        "interval": 3600,
+        "exec": "bash -c 'cnt=$(checkupdates | wc -l); if [ $cnt -gt 0 ]; then echo \" $cnt\"; fi'",
+        "exec-if": "exit 0",
+        "on-click": "kitty -e sudo pacman -Syu",
+        "signal": 8
+    },
+    "clock": {
+        "interval": 60,
+        "format": "{:%I:%M %p}",
+        "max-length": 25,
+        "tooltip-format": "{:%Y-%m-%d}"
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 3,
+            "HDMI-A-1": 3
+        }
+    },
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "{status_indicator} {title} - {artist}",
+        "escape": true,
+        "player-icons": {
+            "spotify": "",
+            "vlc": "󰕼",
+            "youtube": "",
+            "youtube-music": "",
+            "chromium": "",
+            "firefox": ""
+        },
+        "status-icons": {
+            "paused": "⏸"
+        },
+        "ignored-players": []
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 1,
+        "max-volume": 150,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ]
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            ""
+        ],
+        "on-scroll-up": "brightnessctl set +1%",
+        "on-scroll-down": "brightnessctl set 1%- -n 1"
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "",
+        "format-ethernet": "󰊗",
+        "format-disconnected": "󰤭",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "kitty -e nmtui"
+    },
+    "battery": {
+        "interval": 15,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "max-length": 25,
+        "on-double-click": "~/.config/waybar/scripts/powerprofile.sh"
+    }
+}
