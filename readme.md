@@ -10,17 +10,15 @@ This repository contains my personal Arch Linux configuration with Hyprland. It 
 
 ## ✨ Features
 
-| **Window Manager** | Hyprland | [github.com/hyprwm/Hyprland](https://github.com/hyprwm/Hyprland) |
-| **Status Bar** | Waybar | [github.com/Alexays/Waybar](https://github.com/Alexays/Waybar) |
-| **Terminal** | Kitty | [github.com/kovidgoyal/kitty](https://github.com/kovidgoyal/kitty) |
-| **Shell** | Zsh | [zsh.org](https://www.zsh.org/) |
-| **App Launcher** | Rofi (Wayland) | [github.com/lbonn/rofi](https://github.com/lbonn/rofi) |
-| **Notifications** | Mako | [github.com/emersion/mako](https://github.com/emersion/mako) |
-| **File Manager** | Thunar | [github.com/xfce-mirror/thunar](https://github.com/xfce-mirror/thunar) |
-| **Wallpaper** | swww | [github.com/L4VQ/swww](https://github.com/L4VQ/swww) |
-| **Display Manager** | Ly | [github.com/fairyglade/ly](https://github.com/fairyglade/ly) |
-| **Theme Engine** | Matugen | [github.com/InioAsano/matugen](https://github.com/InioAsano/matugen) |
-| **System Monitor** | btop | [github.com/aristocratos/btop](https://github.com/aristocratos/btop) |
+* **Window Manager:** [Hyprland (Wayland)](https://github.com/hyprwm/Hyprland)
+* **Bar:** [Waybar](https://github.com/Alexays/Waybar)
+* **Terminal:** [Kitty](https://github.com/kovidgoyal/kitty)
+* **Shell:** [Zsh](https://www.zsh.org/)
+* **Launcher:** [Rofi - wayland](https://github.com/lbonn/rofi)
+* **Notifications:** [Mako](https://github.com/emersion/mako)
+* **File Manager:** [Thunar](https://github.com/xfce-mirror/thunar)
+* **Wallpaper:** [swww](https://github.com/L4VQ/swww)
+* **Login Greeter:** [Ly](https://github.com/fairyglade/ly)
 
 ## 🚀 Installation
 
