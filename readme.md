@@ -4,11 +4,9 @@ This repository contains my personal Arch Linux configuration with Hyprland. It 
 
 ## 📸 Screenshots
  
-./Pictures/Screenshots/2026-02-18_00-19-31_grim.png
-
-./Pictures/Screenshots/2026-02-18_00-19-40_grim.png
-
-./Pictures/Screenshots/2026-02-18_00-19-51_grim.png
+![Matugen color change](./Pictures/Screenshots/2026-02-18_00-19-40_grim.png)
+![Matugen color change](./Pictures/Screenshots/2026-02-18_00-19-31_grim.png)
+![Matugen color change](./Pictures/Screenshots/2026-02-18_00-19-51_grim.png)
 
 ## ✨ Features
 
