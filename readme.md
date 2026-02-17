@@ -10,13 +10,17 @@ This repository contains my personal Arch Linux configuration with Hyprland. It 
 
 ## ✨ Features
 
-* **Window Manager:** Hyprland (Wayland)
-* **Bar:** Waybar (Customized)
-* **Terminal:** Kitty / Alacritty
-* **Shell:** Zsh with Oh My Zsh
-* **Launcher:** Rofi / Wofi
-* **Notifications:** Dunst / Mako
-* **File Manager:** Thunar / Dolphin
+| **Window Manager** | Hyprland | [github.com/hyprwm/Hyprland](https://github.com/hyprwm/Hyprland) |
+| **Status Bar** | Waybar | [github.com/Alexays/Waybar](https://github.com/Alexays/Waybar) |
+| **Terminal** | Kitty | [github.com/kovidgoyal/kitty](https://github.com/kovidgoyal/kitty) |
+| **Shell** | Zsh | [zsh.org](https://www.zsh.org/) |
+| **App Launcher** | Rofi (Wayland) | [github.com/lbonn/rofi](https://github.com/lbonn/rofi) |
+| **Notifications** | Mako | [github.com/emersion/mako](https://github.com/emersion/mako) |
+| **File Manager** | Thunar | [github.com/xfce-mirror/thunar](https://github.com/xfce-mirror/thunar) |
+| **Wallpaper** | swww | [github.com/L4VQ/swww](https://github.com/L4VQ/swww) |
+| **Display Manager** | Ly | [github.com/fairyglade/ly](https://github.com/fairyglade/ly) |
+| **Theme Engine** | Matugen | [github.com/InioAsano/matugen](https://github.com/InioAsano/matugen) |
+| **System Monitor** | btop | [github.com/aristocratos/btop](https://github.com/aristocratos/btop) |
 
 ## 🚀 Installation
 
@@ -58,11 +62,10 @@ If you prefer to copy the configurations manually:
 
 ## ⌨️ Keybindings
 
-* `Super + Q` - Close Active Window
+* `Super + ESC` - Close Active Window
 * `Super + Return` - Open Terminal
-* `Super + D` - App Launcher
+* `Super + SPACE` - App Launcher
 * `Super + E` - File Manager
-* `Super + M` - Exit Hyprland
 
 ## 🤝 Contributing
 
@@ -76,5 +79,5 @@ This project is licensed under the MIT License.
 
 ### Additional Notes:
 
-* **Dependencies:** This setup relies heavily on the **AUR** (Arch User Repository). It is recommended to have an AUR helper like `yay` or `paru` installed before running the script.
+* **Dependencies:** This setup relies heavily on the **AUR** (Arch User Repository). It is recommended to have an AUR helper `yay` installed before running the script.
 * **GPU Drivers:** If you are using an **NVIDIA** GPU, ensure you have the appropriate `nvidia-dkms` drivers and the necessary environment variables set in `hyprland.conf` to avoid flickering or crashes.
